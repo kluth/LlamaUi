@@ -104,7 +104,6 @@ import {
   getDOM,
   inject,
   internalCreateApplication,
-  isDevMode,
   isInjectable,
   isNgModule,
   isObservable,
@@ -180,7 +179,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1
-} from "./chunk-6MPYEFBJ.js";
+} from "./chunk-DXFV6J6U.js";
 
 // node_modules/@angular/common/fesm2022/http.mjs
 var HttpHandler = class {
@@ -9400,7 +9399,7 @@ var _AsyncAnimationRendererFactory = class _AsyncAnimationRendererFactory {
    * @internal
    */
   loadImpl() {
-    const moduleImpl = this.moduleImpl ?? import("./chunk-EIUZCZGA.js").then((m) => m);
+    const moduleImpl = this.moduleImpl ?? import("./chunk-G3UZWZX7.js").then((m) => m);
     return moduleImpl.catch((e) => {
       throw new RuntimeError(5300, (typeof ngDevMode === "undefined" || ngDevMode) && "Async loading for animations package was enabled, but loading failed. Angular falls back to using regular rendering. No animations will be displayed and their styles won't be applied.");
     }).then(({
@@ -9928,8 +9927,8 @@ var ServiceWorkerModule = _ServiceWorkerModule;
 
 // src/app/app.config.ts
 var appConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(), provideAnimationsAsync(), provideServiceWorker("ngsw-worker.js", {
-    enabled: !isDevMode(),
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes, withComponentInputBinding()), provideClientHydration(), provideAnimationsAsync(), provideServiceWorker("ngsw-worker.js", {
+    enabled: true,
     registrationStrategy: "registerWhenStable:30000"
   })]
 };
@@ -10072,4 +10071,4 @@ bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err))
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=main-4MNP2XE3.js.map
+//# sourceMappingURL=main-XTYKBS2C.js.map

@@ -21931,9 +21931,6 @@ function runPlatformInitializers(injector) {
   const inits = injector.get(PLATFORM_INITIALIZER, null);
   inits?.forEach((init) => init());
 }
-function isDevMode() {
-  return typeof ngDevMode === "undefined" || !!ngDevMode;
-}
 var _ChangeDetectorRef = class _ChangeDetectorRef {
 };
 _ChangeDetectorRef.__NG_ELEMENT_ID__ = injectChangeDetectorRef;
@@ -28224,7 +28221,6 @@ export {
   Compiler,
   provideZoneChangeDetection,
   createPlatformFactory,
-  isDevMode,
   ChangeDetectorRef,
   platformCore,
   ApplicationModule,
@@ -28324,4 +28320,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-6MPYEFBJ.js.map
+//# sourceMappingURL=chunk-DXFV6J6U.js.map
