@@ -9360,7 +9360,7 @@ var VERSION2 = new Version("18.0.3");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-PT3RFOOU.js").then((c) => c.QuestionInputComponent)
+    loadComponent: () => import("./chunk-ZBOECNEK.js").then((c) => c.QuestionInputComponent)
   }
 ];
 
@@ -9989,4 +9989,4 @@ bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err))
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=main-LI5ZPG74.js.map
+//# sourceMappingURL=main-PVKOWEZR.js.map

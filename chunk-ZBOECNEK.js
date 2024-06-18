@@ -13342,6 +13342,7 @@ var _QuestionInputComponent = class _QuestionInputComponent {
     this.conversationStore = inject(ConversationStore);
     effect(() => {
       const state2 = getState(this.conversationStore);
+      this.conversationStore.fetchAnswer("test");
       console.log("Store changed", state2);
     });
   }
@@ -13373,4 +13374,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-PT3RFOOU.js.map
+//# sourceMappingURL=chunk-ZBOECNEK.js.map
