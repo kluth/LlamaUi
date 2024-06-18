@@ -165,7 +165,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-S4XLKBUS.js";
+} from "./chunk-MYQKLVEA.js";
 
 // node_modules/@angular/common/fesm2022/http.mjs
 var HttpHandler = class {
@@ -9360,7 +9360,7 @@ var VERSION2 = new Version("18.0.3");
 var routes = [
   {
     path: "",
-    loadComponent: () => import("./chunk-ZBOECNEK.js").then((c) => c.QuestionInputComponent)
+    loadComponent: () => import("./chunk-IE4YI4B3.js").then((c) => c.QuestionInputComponent)
   }
 ];
 
@@ -9390,7 +9390,7 @@ var _AsyncAnimationRendererFactory = class _AsyncAnimationRendererFactory {
    * @internal
    */
   loadImpl() {
-    const moduleImpl = this.moduleImpl ?? import("./chunk-BCZQ5N64.js").then((m) => m);
+    const moduleImpl = this.moduleImpl ?? import("./chunk-3VWFBE36.js").then((m) => m);
     return moduleImpl.catch((e) => {
       throw new RuntimeError(5300, (typeof ngDevMode === "undefined" || ngDevMode) && "Async loading for animations package was enabled, but loading failed. Angular falls back to using regular rendering. No animations will be displayed and their styles won't be applied.");
     }).then(({
@@ -9989,4 +9989,4 @@ bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err))
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=main-PVKOWEZR.js.map
+//# sourceMappingURL=main-HR2VHL5L.js.map

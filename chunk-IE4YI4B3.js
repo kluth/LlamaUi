@@ -4,7 +4,7 @@ import {
   style,
   transition,
   trigger
-} from "./chunk-YLDGJBTS.js";
+} from "./chunk-HSH6X3LS.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
@@ -46,6 +46,9 @@ import {
   Version,
   ViewChild,
   ViewEncapsulation$1,
+  __privateAdd,
+  __privateGet,
+  __privateSet,
   __spreadProps,
   __spreadValues,
   afterNextRender,
@@ -129,7 +132,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-S4XLKBUS.js";
+} from "./chunk-MYQKLVEA.js";
 
 // node_modules/@angular/cdk/fesm2022/coercion.mjs
 function coerceBooleanProperty(value) {
@@ -13337,9 +13340,15 @@ var ConversationStore = signalStore({ providedIn: "root" }, withState(initialSta
 })));
 
 // src/app/components/question-input/question-input.component.ts
+var _fb;
 var _QuestionInputComponent = class _QuestionInputComponent {
   constructor() {
+    __privateAdd(this, _fb);
     this.conversationStore = inject(ConversationStore);
+    __privateSet(this, _fb, inject(FormBuilder));
+    this.fgroup = __privateGet(this, _fb).group({
+      question: new FormControl()
+    });
     effect(() => {
       const state2 = getState(this.conversationStore);
       this.conversationStore.fetchAnswer("test");
@@ -13347,20 +13356,27 @@ var _QuestionInputComponent = class _QuestionInputComponent {
     });
   }
 };
+_fb = new WeakMap();
 _QuestionInputComponent.\u0275fac = function QuestionInputComponent_Factory(t) {
   return new (t || _QuestionInputComponent)();
 };
-_QuestionInputComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _QuestionInputComponent, selectors: [["app-question-input"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 1, vars: 1, template: function QuestionInputComponent_Template(rf, ctx) {
+_QuestionInputComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _QuestionInputComponent, selectors: [["app-question-input"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 5, vars: 1, consts: [["appearance", "outline"], ["matInput", "", "type", "text"]], template: function QuestionInputComponent_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275text(0);
+    \u0275\u0275elementStart(0, "mat-form-field", 0)(1, "mat-label");
+    \u0275\u0275text(2, "Question");
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(3, "input", 1);
+    \u0275\u0275elementEnd();
+    \u0275\u0275text(4);
   }
   if (rf & 2) {
-    \u0275\u0275textInterpolate1("", ctx.conversationStore.answer(), "\n");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1("\n", ctx.conversationStore.answer(), "\n");
   }
-}, dependencies: [MatInputModule] });
+}, dependencies: [MatInputModule, MatInput, MatFormField, MatLabel, MatFormFieldModule, FormsModule, ReactiveFormsModule] });
 var QuestionInputComponent = _QuestionInputComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(QuestionInputComponent, { className: "QuestionInputComponent", filePath: "src/app/components/question-input/question-input.component.ts", lineNumber: 14 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(QuestionInputComponent, { className: "QuestionInputComponent", filePath: "src/app/components/question-input/question-input.component.ts", lineNumber: 16 });
 })();
 export {
   QuestionInputComponent
@@ -13374,4 +13390,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-ZBOECNEK.js.map
+//# sourceMappingURL=chunk-IE4YI4B3.js.map

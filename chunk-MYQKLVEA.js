@@ -4,6 +4,9 @@ var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __typeError = (msg) => {
+  throw TypeError(msg);
+};
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __spreadValues = (a, b) => {
   for (var prop in b ||= {})
@@ -29,6 +32,10 @@ var __objRest = (source, exclude) => {
     }
   return target;
 };
+var __accessCheck = (obj, member, msg) => member.has(obj) || __typeError("Cannot " + msg);
+var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read from private field"), getter ? getter.call(obj) : member.get(obj));
+var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
+var __privateSet = (obj, member, value, setter) => (__accessCheck(obj, member, "write to private field"), setter ? setter.call(obj, value) : member.set(obj, value), value);
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
     var fulfilled = (value) => {
@@ -28497,6 +28504,9 @@ export {
   __spreadValues,
   __spreadProps,
   __objRest,
+  __privateGet,
+  __privateAdd,
+  __privateSet,
   __async,
   Subscription,
   noop,
@@ -28781,4 +28791,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-S4XLKBUS.js.map
+//# sourceMappingURL=chunk-MYQKLVEA.js.map
