@@ -17,6 +17,7 @@ export class QuestionInputComponent {
   constructor() {
     effect(() => {
       const state = getState(this.conversationStore);
+      this.conversationStore.fetchAnswer('test');
       console.log('Store changed', state);
     });
   }
